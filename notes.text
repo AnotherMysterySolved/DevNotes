@@ -1,0 +1,136 @@
+JS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FOR LOOPS
+  ~Forward~
+    var vacationSpots = ['Paris', 'New York', 'Barcelona'];
+
+    for (var i = 0; i < vacationSpots.length; i++) {
+      console.log('I would love to visit ' + vacationSpots[i]);
+    }
+  ~Backward~
+    var vacationSpots = ['Paris', 'New York', 'Barcelona'];
+
+    for (var i = vacationSpots.length - 1; i >= 0; i--) {
+      console.log('I would love to visit ' + vacationSpots[i]);
+    }
+__________________________________________
+PUSH & POP - ARRAYS
+  var bucketList = ['run', 'hike', 'swim'];
+
+  bucketList.push('cycle', 'fish');
+  bucketList.pop('run');
+
+  console.log(bucketList);
+__________________________________________
+RANDOM NUMBER
+  This will be between 0-100
+  Math.floor(Math.random()*100)
+__________________________________________
+SUBSTRINGS
+  "some word".substring(x, y) where x is where you start chopping and y is where you finish chopping the original string.
+  ~EXAMPLE~
+  "hello". substring(0, 2);
+__________________________________________
+SWITCH STATEMENTS
+  var moonPhase = "full";
+
+  switch (moonPhase) {
+    case "full":
+    	console.log("Howwwlll!!");
+  		break;
+    case "mostly full":
+    	console.log("Arms and legs are getting hairier")
+      break;
+    case "mostly new":
+      console.log("Back on two feet");
+      break;
+    default:
+    	console.log('Invalid moon phase');
+  		break;
+  }
+__________________________________________
+WHILE STATEMENT
+  var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+  var currentCard = 'heart';
+
+  while (currentCard !== 'Spade') {
+    console.log(currentCard);
+
+    var randomNumber = Math.floor(Math.random() * 4);
+
+    currentCard = cards[randomNumber];
+  }
+
+  console.log('We got a spade!');
+
+
+__________________________________________
+jQuery~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HIDE AN ELEMENT(s)
+  function main() {
+    $('.skillset').hide();
+  }
+
+  $(document).ready(main);
+
+__________________________________________
+FADE IN AN ELEMENT(s)
+  function main() {
+    $('.skillset').hide();
+    $('.skillset').fadeIn(1000);
+  }
+
+  $(document).ready(main);
+
+__________________________________________
+NEXT
+  jQuery has a function named next to help us select elements that are next to another element. If we have this in our HTML:
+
+  <div class='item-one'> ... </div>
+  <div class='item-two'> ... </div>
+  If we wanted to hide item-two, we could write:
+
+  $('.item-one').next().hide();
+
+__________________________________________
+SHOW AN ELEMENT
+  To show an element, the syntax looks as such:
+
+  $('.example-class').show();
+
+  show is attached directly to the jQuery selector.
+
+  show will change the CSS attribute "display: none" to a visible display property, therefore showing the element.
+
+__________________________________________
+SLIDETOGGLE
+jQuery provides a method named slideToggle that can animate an element's entrance and exit. The syntax looks like this:
+
+$('.example-class').slideToggle(400);
+
+__________________________________________
+TEXT
+  We can change the text of an element with the jQuery function text. It's syntax looks like this:
+
+  $('.my-selector').text('Hello world!');
+
+__________________________________________
+THIS
+  $(this) selects the clicked element. If there are multiple elements with a class of .example-class, this will only toggle the class of the one that is clicked on.
+
+  $('.example-class').on('click', function() {
+    $(this).toggleClass('active');
+  });
+
+__________________________________________
+TOGGLE
+  toggle will hide or show an element, each time it is triggered. The syntax looks like this:
+
+  $('example-class').toggle();
+
+  __________________________________________
+TOGGLECLASS
+  We can toggle a CSS class with a jQuery function named toggleClass. The syntax looks like this:
+
+  $('.example-class').toggleClass('active')
