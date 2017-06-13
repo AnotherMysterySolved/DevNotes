@@ -10,66 +10,86 @@
 
 <br />
 
-## Block Level Elements
-  *  p
-  *  h1, h2, h3, h4, h5, h6
-  *  ol, ul
-  *  pre
-  *  address
-  *  blockquote
-  *  dl
-  *  div
-  *  fieldset
-  *  form
-  *  hr
-  *  noscript
-  *  table
-## Inline Elements
+## BLOCK LEVEL ELEMENTS
+  -  p
+  -  h1, h2, h3, h4, h5, h6
+  -  ol, ul
+  -  pre
+  -  address
+  -  blockquote
+  -  dl
+  -  div
+  -  fieldset
+  -  form
+  -  hr
+  -  noscript
+  -  table
+## INLINE ELEMENTS
 By default will not create a new line when rendered in the browser
 **CANNOT** take width, height, margin, or padding styles
-  *  a
-  *  b
-  *  big
-  *  i
-  *  small
-  *  tt
-  *  abbr
-  *  acronym
-  *  cite
-  *  code
-  *  dfn
-  *  em
-  *  kbd
-  *  strong
-  *  samp
-  *  time
-  *  var
-  *  bdo
-  *  br
-  *  img
-  *  map
-  *  object
-  *  q
-  *  script
-  *  span
-  *  sub
-  *  sup
-  *  button
-  *  input
-  *  label
-  *  select
-  *  textarea
+  -  a
+  -  b
+  -  big
+  -  i
+  -  small
+  -  tt
+  -  abbr
+  -  acronym
+  -  cite
+  -  code
+  -  dfn
+  -  em
+  -  kbd
+  -  strong
+  -  samp
+  -  time
+  -  var
+  -  bdo
+  -  br
+  -  img
+  -  map
+  -  object
+  -  q
+  -  script
+  -  span
+  -  sub
+  -  sup
+  -  button
+  -  input
+  -  label
+  -  select
+  -  textarea
 
-## Inline-Block Elements
+## INLINE-BLOCK ELEMENTS
 Sit inline with the content but have the characteristics of a block element in that you **CAN** adjust width, height, margin, or padding styles
-  *  Images
-  *  Buttons
+  -  Images
+  -  Buttons
 <br />
 
 # -- CSS ------------------------
 <br />
 
-## Adjacent Selector 
+## POSITIONING
+
+### Static
+- The default state of all html elements
+- Static positioned elements are *not* affected by the top, bottom, left, and right properties
+
+### Relative
+- An element with position: relative; is positioned relative to its normal position
+- Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.
+- Other content will not be adjusted to fit into any gap left by the element.
+
+### Absolute
+- An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+- However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+### Fixed
+- An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+- The top, right, bottom, and left properties are used to position the element.
+
+## SELECTORS
+### Adjacent Selector 
 
 ```
   ul + p {
@@ -77,7 +97,7 @@ Sit inline with the content but have the characteristics of a block element in t
   }
 ```
 In the above example, only the *first* p immediately following the ul will appear in red. 
-## Direct Descendent Selector 
+### Direct Descendent Selector 
 ```
   .container > ul {
     border: 6px solid red;
@@ -85,7 +105,7 @@ In the above example, only the *first* p immediately following the ul will appea
 ```
 In the above example, the output would be a border appearing only around the container and not its children (ul)
 
-## nth-child Selector 
+### nth-child Selector 
 ```
   p: nth-child(3) {
     color: red;
@@ -116,7 +136,7 @@ In the above example, *every* third p element will appear in red
 
 
 
-## Tilde (~) / Sibling Combinator Selector 
+### Tilde (~) / Sibling Combinator Selector 
 ```
   ul ~ p {
     color: red;
