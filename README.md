@@ -71,7 +71,7 @@ Sit inline with the content but have the characteristics of a block element in t
 
 ## FOR LOOPS
   ### Forward
-  ```
+```
     var vacationSpots = ['Paris', 'New York', 'Barcelona'];
 
     for (var i = 0; i < vacationSpots.length; i++) {
