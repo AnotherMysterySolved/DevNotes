@@ -6,7 +6,7 @@
 <br />
 
 
-# HTML
+# -- HTML ------------------------
 
 <br />
 
@@ -66,7 +66,67 @@ Sit inline with the content but have the characteristics of a block element in t
   *  Buttons
 <br />
 
-# JS
+# -- CSS ------------------------
+<br />
+
+## Adjacent Selector 
+
+```
+  ul + p {
+    color: red;
+  }
+```
+In the above example, only the *first* p immediately following the ul will appear in red. 
+## Direct Descendent Selector 
+```
+  .container > ul {
+    border: 6px solid red;
+  }
+```
+In the above example, the output would be a border appearing only around the container and not its children (ul)
+
+## nth-child Selector 
+```
+  p: nth-child(3) {
+    color: red;
+  }
+```
+In the above example, the *third* p element will appear in red
+
+```
+  p: nth-child(odd) {
+    color: red;
+  }
+```
+In the above example, *every odd* p element will appear in red
+
+```
+  p: last-of-type {
+    color: red;
+  }
+```
+In the above example, the *last* p element will appear in red
+
+```
+  p: nth-child(3n) {
+    color: red;
+  }
+```
+In the above example, *every* third p element will appear in red
+
+
+
+## Tilde (~) / Sibling Combinator Selector 
+```
+  ul ~ p {
+    color: red;
+  }
+```
+In the above example, *any* p element existing after the ul will appear in red
+
+<br />
+
+# -- JS ------------------------
 <br />
 
 ## FOR LOOPS
@@ -147,7 +207,7 @@ Sit inline with the content but have the characteristics of a block element in t
 ```
 <br />
 
-# jQuery
+# -- jQuery ------------------------
 <br />
 
 
