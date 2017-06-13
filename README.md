@@ -90,13 +90,14 @@ Sit inline with the content but have the characteristics of a block element in t
 ```
     
 ## PUSH & POP - ARRAYS
+```
   var bucketList = ['run', 'hike', 'swim'];
 
   bucketList.push('cycle', 'fish');
   bucketList.pop('run');
 
   console.log(bucketList);
-
+```
 ## RANDOM NUMBER
   This will be between 0-100
 ```
