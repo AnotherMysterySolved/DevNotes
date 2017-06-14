@@ -148,7 +148,7 @@ Sit inline with the content but have the characteristics of a block element in t
 <br />
 
 
-# -- JS ------------------------
+# -- JavaScript ------------------------
 <br />
 
 ## FOR LOOPS
@@ -198,17 +198,17 @@ Sit inline with the content but have the characteristics of a block element in t
 
   switch (moonPhase) {
     case "full":
-    	console.log("Howwwlll!!");
-  		break;
+      console.log("Howwwlll!!");
+      break;
     case "mostly full":
-    	console.log("Arms and legs are getting hairier")
+      console.log("Arms and legs are getting hairier")
       break;
     case "mostly new":
       console.log("Back on two feet");
       break;
     default:
-    	console.log('Invalid moon phase');
-  		break;
+      console.log('Invalid moon phase');
+      break;
   }
 ```
 
@@ -305,4 +305,26 @@ $('example-class').toggle();
   ```
   $('.example-class').toggleClass('active')
   ```
+
+<br />
+
+# -- ReactJS ------------------------
+<br />
+
+
+## Render
+  ```
+  var React = require('react');
+var ReactDOM = require('react-dom');
+
+var myDiv = (
+  <div className="big">I AM A BIG DIV</div>
+  );
+
+ReactDOM.render(
+  myDiv,
+  document.getElementById('app')
+);
+```
+
   
