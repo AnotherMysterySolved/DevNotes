@@ -6,66 +6,6 @@
 <br />
 
 
-# -- HTML ------------------------
-
-<br />
-
-## BLOCK LEVEL ELEMENTS
-  -  p
-  -  h1, h2, h3, h4, h5, h6
-  -  ol, ul
-  -  pre
-  -  address
-  -  blockquote
-  -  dl
-  -  div
-  -  fieldset
-  -  form
-  -  hr
-  -  noscript
-  -  table
-## INLINE ELEMENTS
-By default will not create a new line when rendered in the browser
-**CANNOT** take width, height, margin, or padding styles
-  -  a
-  -  b
-  -  big
-  -  i
-  -  small
-  -  tt
-  -  abbr
-  -  acronym
-  -  cite
-  -  code
-  -  dfn
-  -  em
-  -  kbd
-  -  strong
-  -  samp
-  -  time
-  -  var
-  -  bdo
-  -  br
-  -  img
-  -  map
-  -  object
-  -  q
-  -  script
-  -  span
-  -  sub
-  -  sup
-  -  button
-  -  input
-  -  label
-  -  select
-  -  textarea
-
-## INLINE-BLOCK ELEMENTS
-Sit inline with the content but have the characteristics of a block element in that you **CAN** adjust width, height, margin, or padding styles
-  -  Images
-  -  Buttons
-<br />
-
 # -- CSS ------------------------
 <br />
 
@@ -145,6 +85,68 @@ In the above example, *every* third p element will appear in red
 In the above example, *any* p element existing after the ul will appear in red
 
 <br />
+
+
+# -- HTML ------------------------
+
+<br />
+
+## BLOCK LEVEL ELEMENTS
+  -  p
+  -  h1, h2, h3, h4, h5, h6
+  -  ol, ul
+  -  pre
+  -  address
+  -  blockquote
+  -  dl
+  -  div
+  -  fieldset
+  -  form
+  -  hr
+  -  noscript
+  -  table
+## INLINE ELEMENTS
+By default will not create a new line when rendered in the browser
+**CANNOT** take width, height, margin, or padding styles
+  -  a
+  -  b
+  -  big
+  -  i
+  -  small
+  -  tt
+  -  abbr
+  -  acronym
+  -  cite
+  -  code
+  -  dfn
+  -  em
+  -  kbd
+  -  strong
+  -  samp
+  -  time
+  -  var
+  -  bdo
+  -  br
+  -  img
+  -  map
+  -  object
+  -  q
+  -  script
+  -  span
+  -  sub
+  -  sup
+  -  button
+  -  input
+  -  label
+  -  select
+  -  textarea
+
+## INLINE-BLOCK ELEMENTS
+Sit inline with the content but have the characteristics of a block element in that you **CAN** adjust width, height, margin, or padding styles
+  -  Images
+  -  Buttons
+<br />
+
 
 # -- JS ------------------------
 <br />
