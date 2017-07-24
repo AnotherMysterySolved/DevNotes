@@ -186,6 +186,33 @@ Sit inline with the content but have the characteristics of a block element in t
   Math.floor(Math.random()*100)
 ```
 
+## TWO WAYS TO ADD NEW PROPERTIES TO AN OBJECT
+```
+var obj = {
+   key1: value1,
+   key2: value2
+};
+
+// Using dot notation:
+
+obj.key3 = "value3";
+
+// Using square bracket notation:
+
+obj["key3"] = "value3";
+```
+
+The first form is used when you know the name of the property. The second form is used when the name of the property is dynamically determined. Like in this example:
+```
+var getProperty = function (propertyName) {
+   return obj[propertyName];
+};
+
+getProperty("key1");
+getProperty("key2");
+getProperty("key3");
+```
+
 ## SUBSTRINGS
   "some word".substring(x, y) where x is where you start chopping and y is where you finish chopping the original string.
 ```
