@@ -338,6 +338,17 @@ $('example-class').toggle();
 # -- ReactJS ------------------------
 <br />
 
+## Event Listeners in JSX
+- An event listener attribute's value should be a function.
+- Note that in HTML, event listener names are written in all lowercase, such as onclick or onmouseover. **In JSX, event listener names are written in camelCase**, such as onClick or onMouseOver
+```
+function myFunc() {
+  alert('Make myFunc the pFunc... hahahaha');
+}
+
+<img onClick={myFunc} />
+```
+
 ## JS in the JSX
 
 ```
@@ -345,6 +356,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 ReactDOM.render(
+  // to use JS we simply wrap w/e it is in: { }
   <h1>{2 + 3}</h1>,
   document.getElementById('app')
 );
