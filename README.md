@@ -377,6 +377,36 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
+Another example:
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: '#',
+  doggy: '#'
+};
+let img;
+
+// if/else statement begins here:
+if (coinToss() === 'heads') {
+  img = (
+    <img src={pics.kitty} />
+  );
+} else {
+  img = ( 
+    <img src={pics.doggy} />
+  );
+}
+
+ReactDOM.render(img, document.getElementById('app'));
+```
+
 
 ## JS in the JSX
 
