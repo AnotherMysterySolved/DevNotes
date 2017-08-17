@@ -421,6 +421,50 @@ ReactDOM.render(
 );
 ```
 
+## Keys
+- When you make a list in JSX, sometimes your list will need to include something called keys:
+```
+<ul>
+  <li key="li-01">Example1</li>
+  <li key="li-02">Example2</li>
+  <li key="li-03">Example3</li>
+</ul>
+```
+- A key is a JSX attribute. The attribute's name is key. The attribute's value should be something unique, similar to an id attribute.
+- keys don't do anything that you can see! React uses them internally to keep track of lists. If you don't use keys when you're supposed to, React might accidentally scramble your list-items into the wrong order.
+- An example using mapping:
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rick', 'Morty', 'Summer'];
+
+const peopleLis = people.map((person, i) =>
+  // expression goes here:
+  <li key={'person_' + i}>{person}</li>
+);
+
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
+```
+
+
+## .map in JSX
+If you want to create a list of JSX elements, then .map() is often your best bet
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person =>
+  // expression goes here:
+	<li>{person}</li>);
+);
+
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'))
+```
+
 In the above example, the output will be: 5
 
 ## Render
@@ -454,6 +498,38 @@ var profile = (
       THANKS HA LOT
     </article>
   </div>
+);
+```
+## Ternary Operators show up a lot in JSX
+- The ternary operator works the same way in React as it does in regular JavaScript
+- Here's how you might use the ternary operator in a JSX expression:
+```
+const headline = (
+  <h1>
+    { age >= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+  </h1>
+);
+```
+Another example:
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function coinToss () {
+  // Randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: '#',
+  doggy: '#'
+};
+
+const img = <img src={pics[coinToss() == 'heads' ? 'kitty' : 'doggy']} />;
+
+ReactDOM.render(
+	img, 
+	document.getElementById('app')
 );
 ```
 
