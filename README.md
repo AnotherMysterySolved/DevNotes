@@ -349,6 +349,35 @@ function myFunc() {
 <img onClick={myFunc} />
 ```
 
+## if Statements in JSX
+- You **CANNOT** inject an if statment into JSX
+- A common way around this is to write an if statement, and not inject it into JSX
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+let message;
+
+if (user.age >= drinkingAge) {
+  message = (
+    <h1>
+      Hey, check out this IPA!
+    </h1>
+  );
+} else {
+  message = (
+    <h1>
+      Hey, check out this O'DOUL'S!
+    </h1>
+  );
+}
+
+ReactDOM.render(
+  message, 
+  document.getElementById('app')
+);
+```
+
 ## JS in the JSX
 
 ```
