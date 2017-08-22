@@ -482,6 +482,36 @@ ReactDOM.render(
 );
 ```
 
+## Render A Component
+- A component class needs a set of instructions which tell the component class how to build components. When you make a new component class, these instructions are the body of your class declaration:
+```
+class MyComponentClass extends React.Component
+{ // everything in between these curly-braces is instructions for how to build components
+
+  render() {
+    return <h1>Hello world</h1>;
+  }
+}
+```
+- This class declaration results in a new component class, in this case named MyComponentClass. MyComponentClass has one method, named render. This all happens via standard JavaScript class syntax.
+
+- **NOTE:** JSX elements can be either HTML-like, or component instances. JSX uses capitalization to distinguish between the two! That is the React-specific reason why component class names must begin with capital letters. In a JSX element, that capitalized first letter says, "I will be a component instance and not an HTML tag."
+
+- Whenever you make a component, that component inherits all of the methods of its component class. MyComponentClass has one method: MyComponentClass.render(). Therefore, <MyComponentClass /> also has a method named render.
+
+- You could make a million different ```<MyComponentClass />``` instances, and each one would inherit this same exact render method.
+
+- Since the component has a render method, all that's left to do is call it. To call a component's render method, you pass that component to ```ReactDOM.render()```. Notice the component, being passed as ```ReactDOM.render()```'s first argument:
+```
+ReactDOM.render(
+  <MyComponentClass />,
+  document.getElementById('app')
+);
+```
+- ```ReactDOM.render()``` will tell ```<MyComponentClass />``` to call its render method.
+
+- ```<MyComponentClass />``` will call its render method, which will return the JSX element ```<h1>Hello world</h1>```. ```ReactDOM.render()``` will then take that resulting JSX element, and add it to the virtual DOM. This will make "Hello world" appear on the screen.
+
 ## Self-closing Tags
 - Most HTML elements use two tags: an opening tag (<div>), and a closing tag (</div>). However, some HTML elements such as <img> and <input> use only one tag. When you write a self-closing tag in HTML, it is optional to include a forward-slash immediately before the final angle-bracket
 - In JSX, you have to include the slash. If you write a self-closing tag in JSX and forget the slash, you will raise an error
