@@ -1,6 +1,14 @@
 ### _A work in progress..._
 <br />
 <br />
+
+**Helpful Sources:**
+- MDN
+- Codecademy
+- W3Schools
+- CSS-Tricks
+- JavaScript is Sexy
+
 <br />
 <br />
 <br />
@@ -575,6 +583,33 @@ const theBestString = 'tralalalala i am da best';
 ReactDOM.render(<h1>{theBestString}</h1>, document.getElementById('app'));
 
 // Output == tralalalala i am da best
+```
+## Variable Attributes in a Component
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const owl = {
+  title: "Excellent Owl",
+  src: "#"
+};
+
+// Component class starts here:
+class Owl extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>{owl.title}</h1>
+        <img src={owl.src} alt={owl.title} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Owl />,
+  document.getElementById('app')
+); 
 ```
 
 When writing JSX, it's common to use variables to set attributes.
