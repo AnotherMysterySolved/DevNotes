@@ -357,6 +357,28 @@ function myFunc() {
 <img onClick={myFunc} />
 ```
 
+
+## Use an Event Listener in a Component
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick={this.scream}>AAAAAH!</button>;
+  }
+}
+
+ReactDOM.render(
+	<Button />,
+        document.getElementById('app')
+	);
+```
+
 ## if Statements in JSX
 - You **CANNOT** inject an if statment into JSX
 - A common way around this is to write an if statement, and not inject it into JSX
