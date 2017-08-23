@@ -358,7 +358,7 @@ function myFunc() {
 ```
 
 
-## Use an Event Listener in a Component
+## Event Listener in a Component
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -587,7 +587,27 @@ ReactDOM.render(
 - ```ReactDOM.render()``` will tell ```<MyComponentClass />``` to call its render method.
 
 - ```<MyComponentClass />``` will call its render method, which will return the JSX element ```<h1>Hello world</h1>```. ```ReactDOM.render()``` will then take that resulting JSX element, and add it to the virtual DOM. This will make "Hello world" appear on the screen.
+## Require a File
+(line 3)
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {NavBar} from './NavBar.js'
 
+
+class ProfilePage extends React.Component {
+  render() {
+    return (
+      <div>
+				<NavBar />
+        <h1>All About Me!</h1>
+        <p>I like movies and blah blah blah blah blah</p>
+        <img src="https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-monkeyselfie.jpg" />
+      </div>
+    );
+  }
+}
+```
 ## Self-closing Tags
 - Most HTML elements use two tags: an opening tag (<div>), and a closing tag (</div>). However, some HTML elements such as <img> and <input> use only one tag. When you write a self-closing tag in HTML, it is optional to include a forward-slash immediately before the final angle-bracket
 - In JSX, you have to include the slash. If you write a self-closing tag in JSX and forget the slash, you will raise an error
