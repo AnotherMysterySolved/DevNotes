@@ -581,6 +581,10 @@ ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'))
 
 In the above example, the output will be: 5
 
+## Props
+Props is the name of the object that stores passed-in information. ```this.props``` refers to that storage object. At the same time, each piece of passed-in information is called a prop. This means that props could refer to two pieces of passed-in information, or it could refer to the object that stores those pieces of information ```:(```
+
+
 ## Render
   ```
   var React = require('react');
