@@ -584,6 +584,52 @@ In the above example, the output will be: 5
 ## Props
 Props is the name of the object that stores passed-in information. ```this.props``` refers to that storage object. At the same time, each piece of passed-in information is called a prop. This means that props could refer to two pieces of passed-in information, or it could refer to the object that stores those pieces of information ```:(```
 
+## Props to pass info from one component to another
+Greeting.js
+```
+import React from 'react';
+
+export class Greeting extends React.Component {
+  render() {
+    return <h1>Hi there, {this.props.name}!</h1>;
+  }
+}
+```
+App.js
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Greeting } from './Greeting';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>
+          Hullo and, "Welcome to The Newzz," "On Line!"
+        </h1>
+        <Greeting name="Ruby" />
+        <article>
+          Latest newzz:  where is my phone?
+        </article>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />, 
+  document.getElementById('app')
+);
+```
+**Output will be:**
+<br/>
+Hullo and, "Welcome to The Newzz," "On Line!"
+<br/>
+Hi there, Ruby!
+<br/>
+Latest newzz: where is my phone?
+
 
 ## Render
   ```
